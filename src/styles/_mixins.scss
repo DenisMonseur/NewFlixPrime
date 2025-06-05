@@ -1,0 +1,11 @@
+@mixin flex-nav {
+   display: flex;
+   flex-direction: row;
+   gap: 20px;
+
+   a {
+      color: white;
+      text-decoration: none;
+   }
+}
+

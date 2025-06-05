@@ -1,0 +1,19 @@
+@import "./mixins";
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    background-color: black;
+    color: white;
+
+    .left-nav {
+        @include flex-nav
+    }
+
+    .right-nav {
+        @include flex-nav
+    }
+}
+

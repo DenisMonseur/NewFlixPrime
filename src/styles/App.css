@@ -1,0 +1,26 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+  background-color: black;
+  color: white;
+}
+.navbar .left-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.navbar .left-nav a {
+  color: white;
+  text-decoration: none;
+}
+.navbar .right-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.navbar .right-nav a {
+  color: white;
+  text-decoration: none;
+}
