@@ -8,18 +8,11 @@ import SeriesRow from "./components/SeriesRow";
 import Serie from "./components/Serie";
 import MoviesRow from "./components/MoviesRow";
 import Movie from "./components/Movie";
+import Search from "./components/Search";
+import Favorites from "./components/Favorites";
 
 function App() {
-
   const apiKey = import.meta.env.VITE_API_KEY;
-
-  function babla() {
-    console.log(import.meta.env.VITE_API_KEY);
-    console.log(apiKey);
-  }
-
-  babla()
-  
 
   return (
     <Router>
@@ -72,6 +65,8 @@ function App() {
         />
         <Route path="/serie/:id" element={<Serie />} />
         <Route path="/movie/:id" element={<Movie />} />
+        <Route path="/search" element={<Search />} />
+        <Route path="/favorites" element={<Favorites />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
       </Routes>

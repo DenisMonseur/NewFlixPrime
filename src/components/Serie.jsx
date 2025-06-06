@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { AddToFavorites } from "../utils/AddToFavorites";
 
 function Serie() {
   
@@ -40,7 +41,12 @@ function Serie() {
         <p>{serie.overview}</p>
       </div>
       <button className="watch">Watch now</button>
-      <button className="add-favorites">Add to favorites</button>
+      <button
+        className="add-favorites"
+        onClick={() => AddToFavorites({ ...serie, mediaType:"tv" })}
+      >
+        Add to favorites
+      </button>
     </div>
   );
 }
