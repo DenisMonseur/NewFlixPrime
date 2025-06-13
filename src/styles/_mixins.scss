@@ -1,11 +1,59 @@
 @mixin flex-nav {
    display: flex;
    flex-direction: row;
-   gap: 20px;
+   gap: 50px;
 
    a {
       color: white;
-      text-decoration: none;
    }
 }
 
+@mixin formPage {
+   background-image: url(../assets/NetflixBackground.png) ;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   form {
+      background-color:black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      width: 25%;
+      height: 50%;
+      border-radius: 15px;
+      opacity: 0.9;
+
+      h1 {
+         margin-right: 50px;
+         font-size: 36px;
+         color: goldenrod;
+      }
+
+      input{
+         height:20px;
+         font-size:16px;
+      }
+
+      button{
+         @include button1()
+      }
+      
+   }
+}
+
+@mixin button1 {
+   border-radius: 5px;
+      transition: transform 0.7s ease;
+      font-size: 24px;
+      padding: 5px;
+   
+      &:hover {
+         transform: scale(1.2);
+         background-color: gold;
+      }
+
+}

@@ -17,9 +17,14 @@ function Favorites() {
   }
 
   return (
-    <>
+    <div className="favorites">
+      <h1>Favorites</h1>
       {favorites.map((favorite) => (
-        <div className="search" key={`${favorite.mediaType}-${favorite.id}`}>
+        <div
+          className="individual"
+          id="favs"
+          key={`${favorite.mediaType}-${favorite.id}`}
+        >
           <div className="image">
             <img
               src={`https://image.tmdb.org/t/p/w500/${favorite.poster_path}`}
@@ -27,22 +32,23 @@ function Favorites() {
             />
           </div>
           <div className="info">
+            <h3>{favorite.original_name || favorite.title}</h3>
+            <p>{favorite.overview || "No overview available."}</p>
             <p>
-              First aired:{" "}
+              Released date:{" "}
               {favorite.first_air_date || favorite.release_date || "N/A"}
             </p>
-            <p>{favorite.overview || "No overview available."}</p>
+            <button className="watch">Watch now</button>
+            <button
+              className="add-favorites"
+              onClick={() => removeFavorites(favorite)}
+            >
+              Remove from favorites
+            </button>
           </div>
-          <button className="watch">Watch now</button>
-          <button
-            className="remove-favorites"
-            onClick={() => removeFavorites(favorite)}
-          >
-            Remove from favorites
-          </button>
         </div>
       ))}
-    </>
+    </div>
   );
 }
 

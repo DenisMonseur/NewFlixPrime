@@ -38,16 +38,17 @@ function Movie() {
         />
       </div>
       <div className="info">
-        <p>First aired: {movie.release_date}</p>
+        <h3>{movie.original_title}</h3>
         <p>{movie.overview}</p>
+        <p>Released date: {movie.release_date}</p>
+        <button className="watch">Watch now</button>
+        <button
+          className="add-favorites"
+          onClick={() => AddToFavorites({ ...movie, mediaType: "movie" })}
+        >
+          Add to favorites
+        </button>
       </div>
-      <button className="watch">Watch now</button>
-      <button
-        className="add-favorites"
-        onClick={() => AddToFavorites({ ...movie, mediaType: "movie" })}
-      >
-        Add to favorites
-      </button>
     </div>
   );
 }

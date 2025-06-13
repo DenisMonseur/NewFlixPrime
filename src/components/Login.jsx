@@ -1,23 +1,24 @@
 function Login() {
-    
-    return (
-      <>
-        <div>
-          <form>
-            <h1>Login</h1>
-            <div className="email">
-              <label htmlFor="email">email :</label>
-              <input type="email" id="email" />
-            </div>
-            <div className="password">
-              <label htmlFor="password">password :</label>
-              <input type="password" id="password" />
-            </div>
-            <button>Login</button>
-          </form>
-        </div>
-      </>
-    );
+  return (
+    <>
+      <div className="login">
+        <form>
+          <h1>Login</h1>
+          <div className="email">
+            <input type="email" id="email" placeholder=" Enter your mail" />
+          </div>
+          <div className="password">
+            <input
+              type="password"
+              id="password"
+              placeholder=" Enter your password"
+            />
+          </div>
+          <button>Login</button>
+        </form>
+      </div>
+    </>
+  );
 }
 
-export default Login
+export default Login;

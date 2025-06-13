@@ -37,16 +37,17 @@ function Serie() {
         />
       </div>
       <div className="info">
-        <p>First aired: {serie.first_air_date}</p>
+        <h3>{serie.original_name}</h3>
         <p>{serie.overview}</p>
+        <p>Released date: {serie.first_air_date}</p>
+        <button className="watch">Watch now</button>
+        <button
+          className="add-favorites"
+          onClick={() => AddToFavorites({ ...serie, mediaType: "tv" })}
+        >
+          Add to favorites
+        </button>
       </div>
-      <button className="watch">Watch now</button>
-      <button
-        className="add-favorites"
-        onClick={() => AddToFavorites({ ...serie, mediaType:"tv" })}
-      >
-        Add to favorites
-      </button>
     </div>
   );
 }

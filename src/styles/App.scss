@@ -1,12 +1,48 @@
 @import "./mixins";
 
+* {
+    font-family: "Oswald", sans-serif;
+}
+
+
+
+body {
+    background-color: black;
+    color: white;
+    
+    h1{
+        margin-left: 40px;
+    }
+
+    
+}
+
+
 .navbar {
+    position: fixed;
+    top: 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 50px;
     background-color: black;
     color: white;
+    width: 100vw;
+    border-bottom: 1px solid gold;
+
+    a {
+            text-decoration: none;
+
+    h1{
+        color: gold;
+        margin-left: 50px;
+        margin-right: 50px;
+
+        }
+        span{
+            color: goldenrod;
+        }
+    }
 
     .left-nav {
         @include flex-nav
@@ -16,4 +52,121 @@
         @include flex-nav
     }
 }
+
+.row-title{
+    
+    padding-top: 60px;
+    .row {
+            display: flex;
+            flex-direction: row;
+            gap:5px;
+    }
+    .card{
+        width: 360px;
+        height: 480px;
+        
+        .image {
+                width: 360px;
+                height: 480px;
+            img{
+                width: 360px;
+                height: 480px;
+                border-radius: 15px;
+            }
+        }
+    }
+}
+
+
+.individual{
+    display: flex;
+    gap: 40px;
+    padding-top: 90px;
+    margin-left: 40px;
+    margin-right: 40px;
+
+    h3{
+        font-size: 36px;
+        color: goldenrod;
+    }
+
+    p{
+        font-size: 24px;
+    }
+
+    button {
+        @include button1
+    }
+
+        .add-favorites{
+            margin-left: 40px;
+        }
+
+    .image {
+            width: 420px;
+            height: 580px;
+    
+            img {
+                width: 420px;
+                height: 580px;
+                border-radius: 15px;
+            }
+        }  
+}
+
+.favorites{
+    padding-top: 60px;
+
+    .image {
+            width: 360px;
+            height: 480px;
+            margin-top: 20px;
+    
+            img {
+                width: 360px;
+                height: 480px;
+                border-radius: 15px;
+            }
+    }
+
+    #favs {
+        padding-top: 0;
+    }
+
+}
+
+.search{
+    padding-top: 110px;
+    padding-left: 100px;
+
+    label{
+        font-size: 24px;
+        margin-left: 40px;
+    }
+
+    input{
+        margin-left: 20px;
+        width: 250px;
+        height: 30px;
+        font-size: 24px;
+    }
+} 
+
+.login{
+    @include formPage;
+}
+
+.register{
+    @include formPage;
+    margin-top: 50px;
+    form{
+        height: 80%;
+    }
+
+    .terms{
+        margin-left: 30px;
+    }
+}
+
+
 

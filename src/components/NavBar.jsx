@@ -15,9 +15,11 @@ function NavBar() {
             <h3>Search</h3>
           </Link>
         </div>
-        <h1>
-          New<span>FliX</span>
-        </h1>
+        <Link to="/">
+          <h1>
+            New<span>FliX</span>
+          </h1>
+        </Link>
         <div className="right-nav">
           <Link to="/favorites">
             <h3>Favorites</h3>

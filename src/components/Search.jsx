@@ -28,7 +28,7 @@ function Search() {
   }
 
   return (
-    <>
+    <div className="search">
       <label htmlFor="search-query">Type your search:</label>
       <input
         type="text"
@@ -38,7 +38,7 @@ function Search() {
       />
       {mediaInfos &&
         mediaInfos.results.map((media) => (
-          <div className="search" key={media.id}>
+          <div className="individual" key={media.id}>
             <div className="image">
               <img
                 src={`https://image.tmdb.org/t/p/w500/${media.poster_path}`}
@@ -46,24 +46,25 @@ function Search() {
               />
             </div>
             <div className="info">
+              <h3>{media.original_name || media.title}</h3>
+              <p>{media.overview || "No overview available."}</p>
               <p>
-                First aired:{" "}
+                Released date:{" "}
                 {media.first_air_date || media.release_date || "N/A"}
               </p>
-              <p>{media.overview || "No overview available."}</p>
+              <button className="watch">Watch now</button>
+              <button
+                className="add-favorites"
+                onClick={() =>
+                  AddToFavorites({ ...media, mediaType: media.media_type })
+                }
+              >
+                Add to favorites
+              </button>
             </div>
-            <button className="watch">Watch now</button>
-            <button
-              className="add-favorites"
-              onClick={() =>
-                AddToFavorites({ ... media, mediaType: media.media_type })
-              }
-            >
-              Add to favorites
-            </button>
           </div>
         ))}
-    </>
+    </div>
   );
 }
 

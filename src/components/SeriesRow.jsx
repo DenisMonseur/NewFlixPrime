@@ -23,26 +23,28 @@ function SeriesRow({ apiUrl, title }) {
   }
 
   return (
-    <div className="row">
+    <div className="row-title">
       <h1>{title}</h1>
-      {series &&
-        series.results.map((serie) => (
-          <Link to={`/serie/${serie.id}`} key={serie.id}>
-            <div className="card">
-              <div className="image">
-                <img
-                  src={`https://image.tmdb.org/t/p/w500/${serie.poster_path}`}
-                  alt=""
-                />
-              </div>
-              {/* <div className="info">
+      <div className="row">
+        {series &&
+          series.results.map((serie) => (
+            <Link to={`/serie/${serie.id}`} key={serie.id}>
+              <div className="card">
+                <div className="image">
+                  <img
+                    src={`https://image.tmdb.org/t/p/w500/${serie.poster_path}`}
+                    alt=""
+                  />
+                </div>
+                {/* <div className="info">
               <p className="title">{serie.original_name}</p>
               <p className="date">{serie.first_air_date}</p>
               <p className="resume">{serie.overview}</p>
             </div> */}
-            </div>
-          </Link>
-        ))}
+              </div>
+            </Link>
+          ))}
+      </div>
     </div>
   );
 }

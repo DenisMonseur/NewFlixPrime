@@ -23,26 +23,28 @@ function MoviesRow({ apiUrl, title }) {
   }
 
   return (
-    <div className="row">
+    <div className="row-title">
       <h1>{title}</h1>
-      {movies &&
-        movies.results.map((movie) => (
-          <Link to={`/movie/${movie.id}`} key={movie.id}>
-            <div className="card">
-              <div className="image">
-                <img
-                  src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-                  alt=""
-                />
-              </div>
-              {/* <div className="info">
+      <div className="row">
+        {movies &&
+          movies.results.map((movie) => (
+            <Link to={`/movie/${movie.id}`} key={movie.id}>
+              <div className="card">
+                <div className="image">
+                  <img
+                    src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+                    alt=""
+                  />
+                </div>
+                {/* <div className="info">
               <p className="title">{movie.original_name}</p>
               <p className="date">{movie.first_air_date}</p>
               <p className="resume">{movie.overview}</p>
             </div> */}
-            </div>
-          </Link>
-        ))}
+              </div>
+            </Link>
+          ))}
+      </div>
     </div>
   );
 }
