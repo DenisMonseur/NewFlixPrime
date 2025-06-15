@@ -1,8 +1,10 @@
-import { useState} from "react";
+import { useState } from "react";
+import { toast } from "sonner";
 
 function Favorites() {
-  const [favorites, setFavorites] = useState((JSON.parse(localStorage.getItem("favorites")) || []))
-  
+  const [favorites, setFavorites] = useState(
+    JSON.parse(localStorage.getItem("favorites")) || []
+  );
 
   const removeFavorites = (item) => {
     const newFavorites = favorites.filter(
@@ -13,7 +15,7 @@ function Favorites() {
   };
 
   if (favorites.length == 0) {
-    return (<h1>Your List is Empty</h1>)
+    return <h1 className="empty-list">Your List is Empty</h1>;
   }
 
   return (

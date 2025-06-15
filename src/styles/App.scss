@@ -14,7 +14,10 @@ body {
         margin-left: 40px;
     }
 
-    
+    .empty-list {
+        margin-top: 150px;
+        margin-left: 50px;
+    }
 }
 
 
@@ -30,8 +33,11 @@ body {
     width: 100vw;
     border-bottom: 1px solid gold;
 
+
+
     a {
-            text-decoration: none;
+        text-decoration: none;
+    }
 
     h1{
         color: gold;
@@ -42,7 +48,11 @@ body {
         span{
             color: goldenrod;
         }
+
+    h3 {
+        margin-top: 30px;
     }
+    
 
     .left-nav {
         @include flex-nav
@@ -56,6 +66,13 @@ body {
 .row-title{
     
     padding-top: 60px;
+    
+    h1{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+
     .row {
             display: flex;
             flex-direction: row;

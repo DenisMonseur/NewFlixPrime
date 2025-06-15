@@ -1,3 +1,5 @@
+import { toast } from "sonner"
+
 export function AddToFavorites(item) {
     // array can't be empty or .some will crash
     const storedFavorites = JSON.parse(localStorage.getItem("favorites")) || [] 
@@ -9,7 +11,10 @@ export function AddToFavorites(item) {
         storedFavorites.push(item)
         localStorage.setItem("favorites", JSON.stringify(storedFavorites))
         console.log((item, "added to favorites"));
+        toast.success(`added to favorites`)
+
     } else {
         console.log(item, "already in favorites");
+        toast.error("already in favorites")
     }
 }
