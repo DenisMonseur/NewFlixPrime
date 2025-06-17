@@ -8,13 +8,13 @@ export function AddToFavorites(item) {
     const duplicate = storedFavorites.some(fav => fav.id === item.id && fav.mediaType === item.mediaType)
 
     if(!duplicate){
-        storedFavorites.push(item)
+        storedFavorites.unshift(item)
         localStorage.setItem("favorites", JSON.stringify(storedFavorites))
         console.log((item, "added to favorites"));
-        toast.success(`added to favorites`)
+        toast.success(`Added to favorites`)
 
     } else {
         console.log(item, "already in favorites");
-        toast.error("already in favorites")
+        toast.error("Already in favorites")
     }
 }

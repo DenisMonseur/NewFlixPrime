@@ -26,12 +26,12 @@ function App() {
             element={
               <>
                 <MoviesRow
-                  apiUrl={`https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}page=1`}
+                  apiUrl={`https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}page=2`}
                   title="Popular Movies"
                 />
                 <SeriesRow
-                  apiUrl={`https://api.themoviedb.org/3/tv/popular?api_key=${apiKey}page=1`}
-                  title="Popular shows"
+                  apiUrl={`https://api.themoviedb.org/3/tv/top_rated?api_key=${apiKey}page=3`}
+                  title="Popular Shows"
                 />
               </>
             }
@@ -42,11 +42,11 @@ function App() {
               <>
                 <SeriesRow
                   apiUrl={`https://api.themoviedb.org/3/tv/top_rated?api_key=${apiKey}page=1`}
-                  title="Top rated "
+                  title="Top Rated "
                 />
                 <SeriesRow
                   apiUrl={`https://api.themoviedb.org/3/tv/top_rated?api_key=${apiKey}page=2`}
-                  title="Watch again"
+                  title="Trending"
                 />
               </>
             }
@@ -61,7 +61,7 @@ function App() {
                 />
                 <MoviesRow
                   apiUrl={`https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}page=1`}
-                  title="Discover"
+                  title="Trending"
                 />
               </>
             }

@@ -10,6 +10,7 @@
 
 @mixin formPage {
    background-image: url(../assets/NetflixBackground.png) ;
+   background-size: cover;
    height: 100vh;
    display: flex;
    justify-content: center;

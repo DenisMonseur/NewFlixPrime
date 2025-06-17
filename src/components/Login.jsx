@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { toast } from "sonner";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
   const [userMail, setUserMail] = useState("");
   const [password, setPassword] = useState("")
+  const navigate = useNavigate()
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -12,6 +14,7 @@ function Login() {
       return
     }
     toast.success(`Sucessfully logged in as ${userMail}`);
+    navigate("/")
   };
 
   return (

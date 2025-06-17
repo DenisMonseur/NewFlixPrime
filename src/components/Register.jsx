@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { toast } from "sonner";
+import { useNavigate } from "react-router-dom";
 
 function Register() {
   const [firstName, setFirstName] = useState("");
@@ -8,6 +9,7 @@ function Register() {
   const [password, setPassword] = useState("");
   const [password2, setPassword2] = useState("");
   const [terms, setTerms] = useState(false);
+  const navigate = useNavigate()
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -30,6 +32,7 @@ function Register() {
       return;
     }
     toast.success(`Welcome to NewFlix ${firstName}`);
+    navigate("/login")
   };
 
   return (

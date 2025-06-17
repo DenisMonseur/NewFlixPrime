@@ -24,10 +24,11 @@ body {
 .navbar {
     position: fixed;
     top: 0;
+    height: 85px;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 50px;
+    gap: 100px;
     background-color: black;
     color: white;
     width: 100vw;
@@ -40,12 +41,16 @@ body {
     }
 
     h1{
+        font-family: 'Bebas Neue', sans-serif;
         color: gold;
+        letter-spacing: 1.5px;
+        font-size: 36px;
         margin-left: 50px;
         margin-right: 50px;
-
+        margin-top: 20px;
         }
         span{
+            font-family: 'Bebas Neue', sans-serif;
             color: goldenrod;
         }
 
@@ -76,7 +81,7 @@ body {
     .row {
             display: flex;
             flex-direction: row;
-            gap:5px;
+            gap:1px;
     }
     .card{
         width: 360px;
@@ -134,6 +139,10 @@ body {
 .favorites{
     padding-top: 60px;
 
+    h1{
+        margin-top: 30px;
+    }
+
     .image {
             width: 360px;
             height: 480px;
@@ -175,8 +184,8 @@ body {
 
 .register{
     @include formPage;
-    margin-top: 50px;
     form{
+        margin-top: 60px;
         height: 80%;
     }
 
