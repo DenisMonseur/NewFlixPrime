@@ -2,6 +2,7 @@ import { useState } from "react";
 import { toast } from "sonner";
 
 function Favorites() {
+  // return empty array in case there's no favorites
   const [favorites, setFavorites] = useState(
     JSON.parse(localStorage.getItem("favorites")) || []
   );
@@ -30,15 +31,15 @@ function Favorites() {
           <div className="image">
             <img
               src={`https://image.tmdb.org/t/p/w500/${favorite.poster_path}`}
-              alt={favorite.original_name || favorite.title || "No title"}
+              alt={favorite.original_name || favorite.title}
             />
           </div>
           <div className="info">
             <h3>{favorite.original_name || favorite.title}</h3>
-            <p>{favorite.overview || "No overview available."}</p>
+            <p>{favorite.overview}</p>
             <p>
               Released date:{" "}
-              {favorite.first_air_date || favorite.release_date || "N/A"}
+              {favorite.first_air_date || favorite.release_date}
             </p>
             <button className="watch">Watch now</button>
             <button
